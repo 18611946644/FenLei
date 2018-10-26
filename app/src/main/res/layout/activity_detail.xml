@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bwie.month1024.widget.TitleView
+        android:id="@+id/tv_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="购物车"></com.bwie.month1024.widget.TitleView>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="#00ffffff">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#000000"></LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_cart"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_shopping_cart_grey_700_24dp" />
+
+        <TextView
+            android:id="@+id/txt_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/img_cart"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txt_goto_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="去结算"
+            android:textColor="#FFFFFF" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom"
+        android:layout_below="@id/tv_cart"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/fragment_category"
+            android:name="com.bwie.month1024.fragment.CategoryFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></fragment>
+
+        <fragment
+            android:id="@+id/fragment_detail"
+            android:name="com.bwie.month1024.fragment.DetailFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"></fragment>
+    </LinearLayout>
+
+</RelativeLayout>

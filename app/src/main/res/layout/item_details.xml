@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF0000"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/img_details"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <com.bwie.month1024.widget.AddDecreaseView
+        android:id="@+id/adv_details"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+    </com.bwie.month1024.widget.AddDecreaseView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/adv_details"
+        android:layout_toRightOf="@id/img_details"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_details_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_single_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>
